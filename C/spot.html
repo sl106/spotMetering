@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Spot Metering | Bahman Farzad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body{
+            background-color: white;
+        }
+        
+        .main{
+            float:right;
+            width:80%;
+            background-color:thistle;
+            padding:20px;
+            
+        }
+        .sidebar{
+            float:left;
+            width:20%;
+            background-color:#ffffff, opacity, 80.0%;
+            /* padding:20px 120px 20px 20px; */
+          
+        }
+        #menu{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            
+        }
+        #menu > a {
+              background-color: #ffffff;
+              margin: 10px;
+              padding: 20px;
+              font-size: 30px;
+              color: #000000;
+        }
+        #menu a:hover{
+            color: #de4b9b;
+        }
+
+        .header {
+            padding: 30px;
+            text-align: center;
+            background-color: #ffffff;
+            height: 102px;
+            width: 250px
+        }
+        .container::after{
+            content:"";
+            display:table;
+            clear:both;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+        <div class="sidebar">
+            <div id="header"> 
+                <header>
+                    <!-- move this pic to a folder in public folder -->
+                    <a href="SM.pgn">
+                    <img src="http://www2.macs.hw.ac.uk/~sl106/SM.png" alt="Spot Metering icon" height="102" width="250"/> </a>
+                </header>
+            </div>
+
+    
+            <div class="menu"> 
+                <nav id="menu">
+                    <a href="">Books</a>
+                    <a href="">Stills</a>
+                        <a>Portrait</a>
+                        <a>Flowers</a>
+                    <a href="">Motion</a>
+                    <a href="">About</a>
+                </nav>
+            </div>
+        </div>
+        </div>
+
+        <div>
+        <div class="main">  
+            <main>
+                <section id="content">
+                    <p style="font-size: 800px">This is the main content</p>
+                </section>
+            </main>
+        </div>
+        </div>
+    </div> 
+</body>
+</html>
+
+
+
+
