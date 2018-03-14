@@ -10,16 +10,21 @@
     <style>
         * {
             box-sizing: border-box;
+            background-color:#ffffff;
         }
         body{
             background-color: white;
+        }
+
+        a:link {
+            text-decoration: none;
         }
         
         .main{
             float:right;
             width:80%;
-            background-color:thistle;
             padding:20px;
+    
             
         }
         .sidebar{
@@ -29,20 +34,21 @@
             /* padding:20px 120px 20px 20px; */
           
         }
-        #menu{
+        .menu{
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             
         }
-        #menu > a {
+        .menu > a {
               background-color: #ffffff;
               margin: 10px;
               padding: 20px;
-              font-size: 30px;
+              font-size: 1.875em;
               color: #000000;
+            
         }
-        #menu a:hover{
+        .menu a:hover{
             color: #de4b9b;
         }
 
@@ -53,21 +59,177 @@
             height: 102px;
             width: 250px
         }
-        .container::after{
+        .container:after{
             content:"";
             display:table;
             clear:both;
         }
-       
+       .slides {display:inline;}
+
+       .book_font{
+            font-family: Georgia,serif;
+            font-size: 16px; 
+            letter-spacing:0.16px; 
+            line-height: 24px;
+            color: #4e748b;
+            text-align: left;
+            background-color:#F0F4F7;
+       }
         
-    </style>
+       .book_title{
+           font-family: Roboto, sans-serif;
+           font-size:50px;
+           line-height: 50px;
+           text-align: start;
+           letter-spacing: 0.5px;
+           color: #565656;
+           background-color:#F0F4F7;
+       }
+
+       .button {
+        color: #fff;
+        background-color:#E25932;
+        border-radius: .4em;
+        font-weight: 500;
+        font-size: 1.125em;
+        border-style: none;
+        text-transform: uppercase;
+        line-height: 3;
+        padding: 0 2.188em;
+        box-shadow: 1px 1px 6px 0px #323250;
+        display: block;
+        margin-bottom: .5em;
+        opacity: 1;
+        
+           
+       }
+       /* .speech-bubble {
+            background: #ffffff;
+            border-radius: 0px;
+            box-shadow: 1px 1px 6px 0px #323c46;
+            font-family: Roboto, sans-serif;
+            font-size: 23.2px;
+            line-height: 23.2px;
+            text-align: start;
+            letter-spacing: normal;
+            color: #E25932;
+            height: 46;
+            width: 139;
+            padding: 11px 16px;
+
+        }
+
+     .speech-bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 10%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #ffffff;
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -10px;
+        margin-bottom: -20px;
+       } */
+
+    .speech_bubble {
+    position: relative;
+    float: right;
+    background-color: #F8FAFC;
+}
+
+.speech_bubble H1 {
+    font-size: 1.45em;
+    color: #E25932;
+    font-weight: 500;
+    background-color: #fff;
+    width: 6em;
+    line-height: 1;
+    margin: 0;
+    padding: .7em .5em .7em .5em;
+    text-transform: uppercase;
+    box-shadow: 1px 1px 6px 0 rgba(50, 50, 50, 0.5);
+}
+
+
+.speech_bubble .triangle {
+    width: 2em;
+    height: 2em;
+    position: relative;
+    overflow: hidden;
+    margin-left: 1em;
+    background-color: #F8FAFC;
+    
+}
+
+.speech_bubble .triangle:after {
+  content: "";
+  position: absolute;
+  width: 1.5em;
+  height: 1.5em;
+  background: #fff;
+  transform: rotate(45deg);
+  top: -.75em;
+  left: -.75em;
+  box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+}
+
+.chat_heading{
+    background-color: #F8FAFC;
+  }
+
+
+
+       .book_img{
+        width: 50%;
+        padding-top: 100px;
+        padding-left:100px;
+        background-color:#F0F4F7;
+       }
+       .book_words{
+        width: 50%;
+        padding-top: 100px;
+        padding-right: 100px;
+        background-color:#F0F4F7;
+       }
+       .about{
+        padding-top: 50px;
+        background-color: #F8FAFC;
+        display: flex;
+        flex-direction: row;  
+        justify-content: center;
+       }
+
+       .description{
+            font-family: Roboto, sans-serif;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: start;
+            letter-spacing: normal;
+            color: #565656;
+            background-color: #F8FAFC;
+            width:608px;
+            
+        }
+
+
+        .book_container{
+            display: flex;
+            display: -webkit-flex;
+            flex-flow:row wrap;
+            text-align: center; 
+            height: 700px;
+        }
+        </style>
 </head>
 
 <body>
     <div class="container">
         <div>
         <div class="sidebar">
-            <div id="header"> 
+            <div class="header"> 
                 <header>
                     <!-- move this pic to a folder in public folder -->
                     <a href="SM.pgn">
@@ -77,7 +239,7 @@
 
     
             <div class="menu"> 
-                <nav id="menu">
+                <nav class="menu">
                     <a href="">Books</a>
                     <a href="">Stills</a>
                         <a>Portrait</a>
@@ -90,15 +252,73 @@
         </div>
 
         <div>
-        <div class="main">  
+        <div class="main">
+            <div class="books">
+                <div class="book_container">
+                <div class=book_img>
+                    <img style="height:480; width:319; box-shadow: 1px 1px 6px 0px #323250;" src="zonesystem.jpeg" alt="zone system">
+                </div>
+                
+                <article class="book_words">
+                    <p class="book_font"><em style="background-color:#F0F4F7;">"This book is one of the best teach yourself books that I have read. The subject matter is very easy to understand assisted by pleny of diagrams and practical work carried out by the student. "</em>
+                    </p>
+                    <p class="book_font">-- <em style="background-color:#F0F4F7;">Customer reviews from Amazon</em></p>
+                    <h1 class=book_title>The Confused Photographer's Guide to Photographic Exposure and the Simplified Zone System</h1>
+                    <div style="padding-right:300px; background-color:#F0F4F7;"><a href="https://www.amazon.co.uk/Confused-Photographers-Photographic-Exposure-Simplified/dp/0966081714/ref=asap_bc?ie=UTF8" class="button">ORDER NOW</a></div>
+                </article>
+                </div>
+
+                <div class="about">
+                    <div class="description">
+                        <p style="background-color: #F8FAFC;">This book teaches the beginning Digital/35mm photographer (9th grade level) the simple and practical methods of correctly exposing a subject. This is also the world's first Digital Zone System book that addresses the application of the Zone System of exposure using current manual digital cameras including many of today's D-Slrs.</p>
+                        <p style="background-color: #F8FAFC;">The book covers in detail the applications of a camera's meter, an off-camera spot meter, an off-camera incident meter, and easy-to-remember techniques for exposing sunlit to moonlit subjects without a meter. The book uses Farzad's simplified 5-stop technique using 100 ISO color slide or Digital Film as its base, but the same techniques can be applied to Black and White, as well as color negative film with different ISOs.</p>
+                        <p style="background-color: #F8FAFC;">The fourth edition also includes Digital footnotes and assignments for photographers using manual digital cameras.</p>
+                    </div>
+
+                    <section id="speech_bubble" class="speech_bubble">
+                            <div class="inner">
+                                <div class="chat_heading">
+                                    <h1>About the book</h1>
+                                    <div class="triangle"></div>
+                                </div>
+                </div>
+
+                <div class="book">
+
+                </div>
+                <div class="about">
+
+                </div>
+            </div>  
             <main>
-                <section id="content">
-                    <p style="font-size: 800px">This is the main content</p>
-                </section>
+                <!-- <section class="content">
+                <img class="slides" src="f2.jpg" alt="tanslucent flower">
+                <img class="slides" src="f1.jpg" alt="white flower">
+                <img class="slides" src="f3.jpg" alt="black and white flower">
+                <img class="slides" src="f4.jpg" alt="bright flower">
+                <img class="slides" src="f5.jpg" alt="smoky flower">
+                </section> -->
             </main>
         </div>
         </div>
     </div> 
+
+  <!--   <script>
+            var index = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("slides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                index++;
+                if (index > x.length) {index = 1}    
+                x[index-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+    </script> -->
 </body>
 </html>
 
