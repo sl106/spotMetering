@@ -27,6 +27,8 @@
             width:20%;
             background-color:#ffffff, opacity, 80.0%;
             /* padding:20px 120px 20px 20px; */
+            position: sticky;
+            top:0;
           
         }
         #menu{
@@ -37,13 +39,39 @@
         }
         #menu > a {
               background-color: #ffffff;
-              margin: 10px;
-              padding: 20px;
-              font-size: 30px;
+              text-decoration: none;
+              margin-left: 55px;
+              margin-top: 15px;
+              font-size: 24px;
+              font-family: cursive;
+              /* font-family: Crimson\ Text; */
               color: #000000;
         }
         #menu a:hover{
             color: #de4b9b;
+        }
+
+        .search-container {
+            margin-top: 8px;
+        }
+
+        .menu .search-container input[type=text] {
+            padding-left: 6px;
+            padding-right: 6px;
+            margin-left: 40px;
+            font-size: 20px;
+            width: 150px;
+        }
+
+        .menu .search-container button {
+            height: 32px;
+            padding: 4px;
+            background: #ddd;
+            cursor: pointer;
+        }
+
+        .menu .search-container button:hover {
+            background: #ccc;
         }
 
         .header {
@@ -65,7 +93,7 @@
 
 <body>
     <div class="container">
-        <div>
+        <!-- <div> -->
         <div class="sidebar">
             <div id="header"> 
                 <header>
@@ -75,33 +103,33 @@
                 </header>
             </div>
 
-    
-            <div class="menu"> 
+            <div class="menu">
+                <div class="search-container">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><img src="https://cdn1.iconfinder.com/data/icons/pointed-edge-web-navigation/117/search-grey-128.png" style="max-width:100%;max-height:100%;"></button>
+                </div>
                 <nav id="menu">
                     <a href="">Books</a>
                     <a href="">Stills</a>
                         <a>Portrait</a>
                         <a>Flowers</a>
                     <a href="">Motion</a>
+                    <a href="">Useful Links</a>
                     <a href="">About</a>
                 </nav>
             </div>
         </div>
-        </div>
+        <!-- </div> -->
 
-        <div>
+        <!-- <div> -->
         <div class="main">  
             <main>
                 <section id="content">
-                    <p style="font-size: 800px">This is the main content</p>
+                    <p style="font-size: 600px">This<br /> is<br /> the<br /> main<br /> con<br />tent</p>
                 </section>
             </main>
         </div>
-        </div>
+        <!-- </div> -->
     </div> 
 </body>
 </html>
-
-
-
-
