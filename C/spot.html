@@ -7,129 +7,121 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
     <script src="main.js"></script>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-        body{
-            background-color: white;
-        }
-        
-        .main{
-            float:right;
-            width:80%;
-            background-color:thistle;
-            padding:20px;
-            
-        }
-        .sidebar{
-            float:left;
-            width:20%;
-            background-color:#ffffff, opacity, 80.0%;
-            /* padding:20px 120px 20px 20px; */
-            position: sticky;
-            top:0;
-          
-        }
-        #menu{
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            
-        }
-        #menu > a {
-              background-color: #ffffff;
-              text-decoration: none;
-              margin-left: 55px;
-              margin-top: 15px;
-              font-size: 24px;
-              font-family: cursive;
-              /* font-family: Crimson\ Text; */
-              color: #000000;
-        }
-        #menu a:hover{
-            color: #de4b9b;
-        }
-
-        .search-container {
-            margin-top: 8px;
-        }
-
-        .menu .search-container input[type=text] {
-            padding-left: 6px;
-            padding-right: 6px;
-            margin-left: 40px;
-            font-size: 20px;
-            width: 150px;
-        }
-
-        .menu .search-container button {
-            height: 32px;
-            padding: 4px;
-            background: #ddd;
-            cursor: pointer;
-        }
-
-        .menu .search-container button:hover {
-            background: #ccc;
-        }
-
-        .header {
-            padding: 30px;
-            text-align: center;
-            background-color: #ffffff;
-            height: 102px;
-            width: 250px
-        }
-        .container::after{
-            content:"";
-            display:table;
-            clear:both;
-        }
-       
-        
-    </style>
 </head>
 
 <body>
     <div class="container">
-        <!-- <div> -->
+        <div>
         <div class="sidebar">
-            <div id="header"> 
+            <div class="header"> 
                 <header>
                     <!-- move this pic to a folder in public folder -->
-                    <a href="SM.pgn">
+                    <a href="SM.pgn" id="title-link">
                     <img src="http://www2.macs.hw.ac.uk/~sl106/SM.png" alt="Spot Metering icon" height="102" width="250"/> </a>
                 </header>
             </div>
 
-            <div class="menu">
-                <div class="search-container">
-                    <input type="text" placeholder="Search..">
-                    <button type="submit"><img src="https://cdn1.iconfinder.com/data/icons/pointed-edge-web-navigation/117/search-grey-128.png" style="max-width:100%;max-height:100%;"></button>
-                </div>
-                <nav id="menu">
-                    <a href="">Books</a>
-                    <a href="">Stills</a>
-                        <a>Portrait</a>
+    
+            <div class="menu"> 
+                    <div class="search-container">
+                            <input type="text" placeholder="Search..">
+                            <button type="submit"><img src="https://cdn1.iconfinder.com/data/icons/pointed-edge-web-navigation/117/search-grey-128.png" style="max-width:100%;max-height:100%;"></button>
+                    </div>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="">Books</a></li>
+                        <li><a href="#" onclick="showDropdown()">Stills</a></li>
+                        <li id="dropdown"><ul>
+                            <li><a>Portrait</a></li>
+                            <li><a>Flowers</a></li>
+                        </ul></li>
+                        <li><a href="">Motion</a></li>
+                    </ul>
+                    
+                    
+                        
                         <a>Flowers</a>
-                    <a href="">Motion</a>
-                    <a href="">Useful Links</a>
+                    
                     <a href="">About</a>
                 </nav>
             </div>
         </div>
-        <!-- </div> -->
+        </div>
 
-        <!-- <div> -->
-        <div class="main">  
+        <div>
+        <div class="main">
+            <div class="books">
+                <div class="book_container">
+                <div class=book_img>
+                    <img style="width:90%; box-shadow: 1px 1px 6px 0px #323250;" src="zonesystem.jpeg" alt="zone system">
+                </div>
+                
+                <article class="book_words">
+                    <p class="book_font"><em style="background-color:#F0F4F7;">"This book is one of the best teach yourself books that I have read. The subject matter is very easy to understand assisted by pleny of diagrams and practical work carried out by the student. "</em>
+                    </p>
+                    <p class="book_font">-- <em style="background-color:#F0F4F7;">Customer reviews from Amazon</em></p>
+                    <h1 class=book_title>The Confused Photographer's Guide to Photographic Exposure and the Simplified Zone System</h1>
+                    <div style="padding-right:300px; background-color:#F0F4F7;"><a href="https://www.amazon.co.uk/Confused-Photographers-Photographic-Exposure-Simplified/dp/0966081714/ref=asap_bc?ie=UTF8" class="button">ORDER NOW</a></div>
+                </article>
+                </div>
+
+                <div class="about">
+                    <div class="description">
+                        <p style="background-color: #F8FAFC;">This book teaches the beginning Digital/35mm photographer (9th grade level) the simple and practical methods of correctly exposing a subject. This is also the world's first Digital Zone System book that addresses the application of the Zone System of exposure using current manual digital cameras including many of today's D-Slrs.</p>
+                        <p style="background-color: #F8FAFC;">The book covers in detail the applications of a camera's meter, an off-camera spot meter, an off-camera incident meter, and easy-to-remember techniques for exposing sunlit to moonlit subjects without a meter. The book uses Farzad's simplified 5-stop technique using 100 ISO color slide or Digital Film as its base, but the same techniques can be applied to Black and White, as well as color negative film with different ISOs.</p>
+                        <p style="background-color: #F8FAFC;">The fourth edition also includes Digital footnotes and assignments for photographers using manual digital cameras.</p>
+                    </div>
+
+                    <section id="speech_bubble" class="speech_bubble">
+                            <div class="inner">
+                                <div class="chat_heading">
+                                    <h1>About the book</h1>
+                                    <div class="triangle"></div>
+                                </div>
+                </div>
+
+                <div class="book">
+
+                </div>
+                <div class="about">
+
+                </div>
+            </div>  
             <main>
-                <section id="content">
-                    <p style="font-size: 600px">This<br /> is<br /> the<br /> main<br /> con<br />tent</p>
-                </section>
+                <!-- <section class="content">
+                <img class="slides" src="f2.jpg" alt="tanslucent flower">
+                <img class="slides" src="f1.jpg" alt="white flower">
+                <img class="slides" src="f3.jpg" alt="black and white flower">
+                <img class="slides" src="f4.jpg" alt="bright flower">
+                <img class="slides" src="f5.jpg" alt="smoky flower">
+                </section> -->
             </main>
         </div>
-        <!-- </div> -->
-    </div> 
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        function showDropdown() {
+            var e = document.getElementById("dropdown");
+            e.style.display = "block";
+        }
+    </script>
+
+  <!--   <script>
+            var index = 0;
+            carousel();
+            
+            function carousel() {
+                var i;
+                var x = document.getElementsByClassName("slides");
+                for (i = 0; i < x.length; i++) {
+                   x[i].style.display = "none";  
+                }
+                index++;
+                if (index > x.length) {index = 1}    
+                x[index-1].style.display = "block";  
+                setTimeout(carousel, 2000); // Change image every 2 seconds
+            }
+    </script> -->
 </body>
 </html>
