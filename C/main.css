@@ -13,8 +13,8 @@ a:link {
 .main{
     float:right;
     width:80%;
+    background-color:thistle;
     padding:20px;
-
     
 }
 .sidebar{
@@ -22,24 +22,48 @@ a:link {
     width:20%;
     background-color:#ffffff, opacity, 80.0%;
     /* padding:20px 120px 20px 20px; */
+    position: sticky;
+    top:0;
   
 }
-.menu{
+#menu{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     
 }
-.menu > a {
+#menu > a {
       background-color: #ffffff;
-      margin: 10px;
-      padding: 20px;
-      font-size: 1.875em;
+      text-decoration: none;
+      margin-left: 55px;
+      margin-top: 15px;
+      font-size: 24px;
+      font-family: cursive;
+      /* font-family: Crimson\ Text; */
       color: #000000;
-    
 }
-.menu a:hover{
+#menu a:hover{
     color: #de4b9b;
+}
+
+.search-container {
+    margin-top: 8px;
+}
+.menu .search-container input[type=text] {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 40px;
+    font-size: 20px;
+    width: 150px;
+}
+.menu .search-container button {
+    height: 32px;
+    padding: 4px;
+    background: #ddd;
+    cursor: pointer;
+}
+.menu .search-container button:hover {
+    background: #ccc;
 }
 
 .header {
