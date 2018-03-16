@@ -1,0 +1,253 @@
+* {
+    box-sizing: border-box;
+    background-color:#ffffff;
+}
+body{
+    background-color: white;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+.main{
+    float:right;
+    width:80%;
+    background-color:thistle;
+    padding:20px;
+    
+}
+.sidebar{
+    float:left;
+    width:20%;
+    background-color:#ffffff, opacity, 80.0%;
+    /* padding:20px 120px 20px 20px; */
+    position: sticky;
+    top:0;
+  
+}
+#menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+#menu > a {
+      background-color: #ffffff;
+      text-decoration: none;
+      margin-left: 55px;
+      margin-top: 15px;
+      font-size: 24px;
+      font-family: cursive;
+      /* font-family: Crimson\ Text; */
+      color: #000000;
+}
+#menu a:hover{
+    color: #de4b9b;
+}
+
+.search-container {
+    margin-top: 8px;
+}
+.menu .search-container input[type=text] {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-left: 40px;
+    font-size: 20px;
+    width: 150px;
+}
+.menu .search-container button {
+    height: 32px;
+    padding: 4px;
+    background: #ddd;
+    cursor: pointer;
+}
+.menu .search-container button:hover {
+    background: #ccc;
+}
+
+.header {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.container:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+.slides {display:inline;}
+
+.book_font{
+    font-family: Georgia,serif;
+    font-size: 16px; 
+    letter-spacing:0.16px; 
+    line-height: 24px;
+    color: #4e748b;
+    text-align: left;
+    background-color:#F0F4F7;
+}
+
+.book_title{
+   font-family: Roboto, sans-serif;
+   font-size:50px;
+   line-height: 50px;
+   text-align: start;
+   letter-spacing: 0.5px;
+   color: #565656;
+   background-color:#F0F4F7;
+}
+
+.button {
+color: #fff;
+background-color:#E25932;
+border-radius: .4em;
+font-weight: 500;
+font-size: 1.125em;
+border-style: none;
+text-transform: uppercase;
+line-height: 3;
+padding: 0 2.188em;
+box-shadow: 1px 1px 6px 0px #323250;
+display: block;
+margin-bottom: .5em;
+opacity: 1;
+
+   
+}
+/* .speech-bubble {
+    background: #ffffff;
+    border-radius: 0px;
+    box-shadow: 1px 1px 6px 0px #323c46;
+    font-family: Roboto, sans-serif;
+    font-size: 23.2px;
+    line-height: 23.2px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #E25932;
+    height: 46;
+    width: 139;
+    padding: 11px 16px;
+}
+.speech-bubble:after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 10%;
+width: 0;
+height: 0;
+border: 20px solid transparent;
+border-top-color: #ffffff;
+border-bottom: 0;
+border-left: 0;
+margin-left: -10px;
+margin-bottom: -20px;
+} */
+
+.speech_bubble {
+position: relative;
+float: right;
+background-color: #F8FAFC;
+}
+
+.speech_bubble H1 {
+font-size: 1.45em;
+color: #E25932;
+font-weight: 500;
+background-color: #fff;
+width: 6em;
+line-height: 1;
+margin: 0;
+padding: .7em .5em .7em .5em;
+text-transform: uppercase;
+box-shadow: 1px 1px 6px 0 rgba(50, 50, 50, 0.5);
+}
+
+
+.speech_bubble .triangle {
+width: 2em;
+height: 2em;
+position: relative;
+overflow: hidden;
+margin-left: 1em;
+background-color: #F8FAFC;
+
+}
+
+.speech_bubble .triangle:after {
+content: "";
+position: absolute;
+width: 1.5em;
+height: 1.5em;
+background: #fff;
+transform: rotate(45deg);
+top: -.75em;
+left: -.75em;
+box-shadow: 1px 1px 3px 0 rgba(50, 50, 50, 0.5);
+}
+
+.chat_heading{
+background-color: #F8FAFC;
+}
+
+
+
+.book_img{
+flex: 1;
+padding-top: 100px;
+padding-left:100px;
+background-color:#F0F4F7;
+}
+.book_words{
+flex: 1;
+padding-top: 100px;
+padding-right: 100px;
+background-color:#F0F4F7;
+}
+.about{
+padding-top: 50px;
+background-color: #F8FAFC;
+display: flex;
+flex-direction: row;  
+justify-content: center;
+}
+
+.description{
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: start;
+    letter-spacing: normal;
+    color: #565656;
+    background-color: #F8FAFC;
+    width:608px;
+    
+}
+
+
+.book_container{
+    display: flex;
+    display: -webkit-flex;
+    flex-flow:row;
+    align-items: stretch;
+    text-align: center;
+}
+
+#title-link {
+    display: block;
+    padding: 10px;
+}
+
+.menu ul {
+    list-style: none;
+}
+
+#dropdown {
+    display: none;
+}
+
+@media all and (max-width: 700px) { 
+    .book_container { 
+        flex-flow: column;
+    }
+}
